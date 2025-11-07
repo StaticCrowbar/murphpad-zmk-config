@@ -51,8 +51,7 @@
         sensors = <&encoder_1>;
     };
 
-    //keymap0: keymap {
-	keymap {
+    keymap0: keymap {
         compatible = "zmk,keymap";
 
         default_layer {
