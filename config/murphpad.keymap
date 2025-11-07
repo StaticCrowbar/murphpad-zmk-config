@@ -20,9 +20,9 @@
     status = "okay";
 };
 
-&encoder_2 {
+/* &encoder_2 {
     status = "okay";
-};
+}; */
 
 /* Combo Definitions*/
 / {
@@ -52,14 +52,30 @@
 
     sensors {
         compatible = "zmk,keymap-sensors";
-        sensors = <&encoder_1 &encoder_2>;
+        sensors = <&encoder_1>; // &encoder_2>;
     };
 
 
     keymap0: keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+
+		default_layer {
+            label = "Default";
+            
+            bindings = <
+								&kp B         	&kp C           		          &kp E
+                &kp Z    		&kp KP_NLCK  	&kp KP_DIVIDE   &kp KP_ASTERISK   &kp KP_MINUS
+                &kp Y    		&kp KP_N7     	&kp KP_N8       &kp KP_N9
+                &kp X    		&kp KP_N4     	&kp KP_N5       &kp KP_N6         &kp KP_PLUS
+                &kp W    		&kp KP_N1		&kp KP_N2       &kp KP_N3 
+                &bootloader						&kp KP_N0       &kp KP_DOT        &kp KP_ENTER
+            >;
+			
+			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DOWN>;
+        };
+		
+        /* default_layer {
         label = "default layer";
             bindings = <
                 &bt BT_CLR       &kp F1       &kp F2          &kp F3            &kp F4
@@ -71,8 +87,8 @@
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 
-        };
-
+        }; */
+		/*
         fn_layer {
         label = "fn layer";
             bindings = <
@@ -85,6 +101,6 @@
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 
-        };
+        }; */
     };
 };
