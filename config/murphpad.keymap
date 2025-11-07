@@ -58,12 +58,12 @@
         default_layer {
         label = "default layer";
             bindings = <
-                &bt BT_CLR       &kp F1       &kp F2          &kp F3            &kp F4
-                &rgb_ug RGB_TOG  &kp KP_NUM   &kp KP_DIVIDE   &kp KP_MULTIPLY   &kp KP_MINUS
-                &rgb_ug RGB_EFF  &kp KP_N7    &kp KP_N8       &kp KP_N9         &kp KP_PLUS
-                &kp C_MUTE       &kp KP_N4    &kp KP_N5       &kp KP_N6         &trans
-                &mo FN           &kp KP_N1    &kp KP_N2       &kp KP_N3         &kp KP_ENTER
-                &kp BSPC         &kp KP_N0    &trans          &kp KP_DOT        &trans
+                &none			&kp B         	&kp C			&none				&kp E
+                &kp Z    		&kp KP_NLCK  	&kp KP_DIVIDE   &kp KP_ASTERISK		&kp KP_MINUS
+                &kp Y    		&kp KP_N7     	&kp KP_N8       &kp KP_N9			&none
+                &kp X    		&kp KP_N4     	&kp KP_N5       &kp KP_N6			&kp KP_PLUS
+                &kp W   		&kp KP_N1		&kp KP_N2       &kp KP_N3			&none
+                &mo FN			&none			&kp KP_N0       &kp KP_DOT			&kp KP_ENTER
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 
@@ -72,12 +72,12 @@
         fn_layer {
         label = "fn layer";
             bindings = <
-                &trans      &out OUT_TOG     &bt BT_PRV       &bt BT_NXT       &trans
-                &trans      &trans           &trans           &trans           &trans
-                &trans      &rgb_ug RGB_HUD  &rgb_ug RGB_SPI  &rgb_ug RGB_HUI  &trans
-                &bt BT_CLR  &rgb_ug RGB_EFR  &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &trans
-                &trans      &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &rgb_ug RGB_BRI  &trans
-                &kp DEL     &rgb_ug RGB_SAD  &trans           &rgb_ug RGB_SAI  &trans
+                &none			&trans     	&trans       &trans   	&trans
+                &bt BT_SEL 0  	&trans     	&trans       &trans   	&trans
+                &bt BT_SEL 1  	&trans     	&trans       &trans		&none
+                &bt BT_CLR    	&trans     	&trans       &trans   	&trans
+                &bootloader    	&trans     	&trans       &trans		&none
+                &trans   		&none		&trans       &trans		&trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 
